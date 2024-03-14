@@ -7,13 +7,15 @@ export  async function getTokenDetails(token) {
     connectMongoDB();
     console.log("fsdaghjgdshbfzhjdbvsjhbdfhjcbghjgfd")
     const tokenDetails = await jwtVerify(
+      
       token,
-      new TextEncoder().encode(process.env.REFRESH_TOKEN_SECRET)
+      new TextEncoder().encode(process.env.ACCESS_TOKEN_SECRET)
     );
+    console.log("yha aa rha h")
 
 
     const userId = tokenDetails.payload._id;
-   // console.log(userId)
+   console.log("+++++++",userId)
 
     const user = await Users.findById(userId);
 
