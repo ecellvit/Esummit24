@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // import LeaderDashboardCards from "./LeaderDashboardCards";
-import Card from '@/components/Card';
-import DeleteTeamButton from '@/components/DeleteTeamButton';
-import boardImg from '@/public/assets/boardpics/image2.svg';
-import { useSession } from 'next-auth/react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import toast, { Toaster } from 'react-hot-toast';
-import Loader from '@/components/Loader';
+import Card from "@/components/Card";
+import DeleteTeamButton from "@/components/DeleteTeamButton";
+import boardImg from "@/public/assets/boardpics/image2.svg";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import toast, { Toaster } from "react-hot-toast";
+import Loader from "@/components/Loader";
 
 export default function LeaderDashboard() {
   const [popUpForDelete, setPopUpForDelete] = useState(false);
@@ -17,9 +17,9 @@ export default function LeaderDashboard() {
   const [deleted, setDeleted] = useState(false);
   const [remove, setRemove] = useState(false);
   const [id, setId] = useState();
-  const [teamId, setTeamId] = useState('');
-  const [teamLeaderId, setTeamLeaderId] = useState('');
-  const [teamName, setTeamName] = useState('');
+  const [teamId, setTeamId] = useState("");
+  const [teamLeaderId, setTeamLeaderId] = useState("");
+  const [teamName, setTeamName] = useState("");
   const [teamMembersData, setTeamMemberData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isQualified, setIsQualified] = useState(null);
@@ -28,9 +28,9 @@ export default function LeaderDashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/');
-    } else if (status === 'authenticated') {
+    if (status === "unauthenticated") {
+      router.push("/");
+    } else if (status === "authenticated") {
       getUserData();
       fetchDataFromBackend();
     }
@@ -39,12 +39,12 @@ export default function LeaderDashboard() {
   const getUserData = () => {
     setIsLoading(true);
     fetch(`/api/userDetails`, {
-      content: 'application/json',
-      method: 'GET',
+      content: "application/json",
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
@@ -52,40 +52,40 @@ export default function LeaderDashboard() {
         const user = data.user;
         setIsLoading(false);
         if (user.hasFilledDetails == true) {
-          if((user.events).includes(2)){
+          if (user.events.includes(2)) {
             if (user.event2TeamId == null) {
-              router.push('/events/event2/makeTeam');
+              router.push("/events/event2/makeTeam");
             } else {
               if (user.event2TeamRole == 1) {
-                router.push('/events/event2/memberDash');
+                router.push("/events/event2/memberDash");
               } else {
                 setIsLoading(false);
               }
             }
-          }else{
-            toast.error('Please register the Event first')
-            router.push('/events/event2')
+          } else {
+            toast.error("Please register the Event first");
+            router.push("/");
           }
         } else {
-          router.push('/userDetails');
+          router.push("/userDetails");
         }
       });
   };
 
   const fetchDataFromBackend = () => {
     setIsLoading(true);
-    fetch('/api/event2/getTeamData', {
-      content: 'application/json',
-      method: 'GET',
+    fetch("/api/event2/getTeamData", {
+      content: "application/json",
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log('dataa', data);
+        console.log("dataa", data);
         setTeamId(data.teamDetails._id);
         setTeamMemberData(data.teamDetails.members);
         setTeamName(data.teamDetails.teamName);
@@ -94,7 +94,9 @@ export default function LeaderDashboard() {
 
         setIsLoading(false);
       })
-      .catch((err) => {console.log('err', err)});
+      .catch((err) => {
+        console.log("err", err);
+      });
   };
 
   function toggleDelete() {
@@ -111,14 +113,14 @@ export default function LeaderDashboard() {
   }
   function removeMember(id) {
     setRemove((prev) => !prev);
-    console.log('id', id);
+    console.log("id", id);
     setIsLoading(true);
     fetch(`/api/event2/removeMember/${id}`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
         userId: id,
@@ -131,43 +133,45 @@ export default function LeaderDashboard() {
       })
       .then(() => {
         setRemove(!remove);
-        toast.success('Member removed successfully.');
+        location.reload();
+        toast.success("Member removed successfully.");
       });
   }
 
   function deleteTeam() {
     if (teamMembersData.length !== 1) {
-      toast.error('First remove all other members.');
+      toast.error("First remove all other members.");
       return;
     }
     setIsLoading(true);
     setDeleted(!deleted);
-    fetch(`/api/event2/deleteTeam/${teamId}` , {
-      method: 'POST',
+    fetch(`/api/event2/deleteTeam/${teamId}`, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
       .then((data) => {})
       .then(() => {
-        router.push('/events/event2/makeTeam');
-        toast.success('Team Deleted.');
+        // router.push('/events/event2/makeTeam');
+        toast.success("Team Deleted.");
+        window.location.href = "/mySchedule";
         setIsLoading(false);
       })
       .catch(() => {
-        toast.error('Something went wrong.');
+        toast.error("Something went wrong.");
         setIsLoading(false);
       });
   }
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      className="bg-cover bg-no-repeat bg-center min-h-screen py-10"
       // style={{ backgroundImage: 'url(/assets/bg/spceBg.svg)' }}
-      >
+    >
       {isLoading && <Loader />}
 
       <div className="max-w-screen-xl mx-auto p-4 text-center">
@@ -177,13 +181,14 @@ export default function LeaderDashboard() {
 
         {teamMembersData.length < 3 && (
           <div
-            style={{ backgroundColor: '#141B2B' }}
-            className="p-2 outline outline-slate-700 outline-2 rounded-md mb-5">
+            style={{ backgroundColor: "#141B2B" }}
+            className="p-2 outline outline-slate-700 outline-2 rounded-md mb-5"
+          >
             <p className="text-white">
-              I understand that if the team I have created does not
-              meet the minimum requirement of 3 members per team
-              before the end of registrations, random members
-              who&lsquo;ve registered would be added to my team
+              I understand that if the team I have created does not meet the
+              minimum requirement of 3 members per team before the end of
+              registrations, random members who&lsquo;ve registered would be
+              added to my team
             </p>
           </div>
         )}
@@ -202,7 +207,7 @@ export default function LeaderDashboard() {
               <div key={el.name}>
                 <Card
                   name={el.name}
-                  Role={el.event2TeamRole === 0 ? 'Leader' : 'Member'}
+                  Role={el.event2TeamRole === 0 ? "Leader" : "Member"}
                   regNo={el.regNo}
                   phone={el.mobNo}
                   leader={true}
@@ -248,4 +253,4 @@ export default function LeaderDashboard() {
       </div>
     </div>
   );
-      }
+}

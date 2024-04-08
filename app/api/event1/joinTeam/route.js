@@ -73,7 +73,6 @@ export async function POST(req, { params }) {
       message: "You have joined the team!",
     });
   } catch (error) {
-    console.log("An error occurred:", error);
     return NextResponse.json({
       message: "Error occurred" }, {status:500});
   }

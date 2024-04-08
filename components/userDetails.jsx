@@ -5,10 +5,6 @@ import { useState } from 'react';
 export default function UserDetails() {
    const { data: session, status } = useSession();
 
-   // use session chl rha h baaki frondend me data kese lena h aap log dekh lo
-   //console.log("fsdbhbsbvdfwad",data);
-   // console.log("fgfcgcgfdfdsds",session);
-    //console.log(data);
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -18,7 +14,6 @@ export default function UserDetails() {
 
     const handleSubmit = async () => {
 
-        console.log('button ')
        
         try {
             const response = await fetch('/api/userDetails', {
@@ -37,7 +32,6 @@ export default function UserDetails() {
             });
 
             if (response.ok) {
-                console.log('Data saved successfully');
          
                 setFirstName('');
                 setLastName('');
@@ -47,10 +41,8 @@ export default function UserDetails() {
                 // router.push('/')
 
             } else {
-                console.log('Failed to save data:', response.statusText);
             }
         } catch (error) {
-            console.log('Error saving data:', error);
         }
     };
 
@@ -63,7 +55,6 @@ export default function UserDetails() {
                     id="firstName"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    style={{ color: 'black' }}
                 />
             </div>
             <div>
@@ -73,7 +64,6 @@ export default function UserDetails() {
                     id="lastName"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    style={{ color: 'black' }}
                 />
             </div>
             <div>
@@ -83,7 +73,6 @@ export default function UserDetails() {
                     id="regNo"
                     value={regNo}
                     onChange={(e) => setRegNo(e.target.value)}
-                    style={{ color: 'black' }}
                 />
             </div>
             <div>
@@ -93,7 +82,6 @@ export default function UserDetails() {
                     id="mobNo"
                     value={mobno}
                     onChange={(e) => setMobno(e.target.value)}
-                    style={{ color: 'black' }}
                 />
             </div>
             <button onClick={()=>handleSubmit()}>Submit</button>

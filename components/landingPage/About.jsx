@@ -17,7 +17,7 @@ const About = () => {
     //     </p>
 
     // </div>
-    <div id="about" class="sm:mx-5 md:mx-20 flex items-center justify-center">
+    <div id="about" class="sm:px-5 md:px-20 flex bg-[#0E0E0E] items-center justify-center font-poppins">
       <div class="h-full w-full rounded-lg bg-gradient-to-b from-[#ffffff00] via-[#fefab730] to-[#d69a3f20] p-1 border-2 border-[#D6993F] m-12">
         <div class=" h-full w-full items-center justify-center bg-gray-800 back p-4 sm:p-8 text-center text-white bg-transparent">
           <div class="flex justify-center">

@@ -68,7 +68,7 @@ export default function LeaderDashboard() {
             }
           }else{
             toast.error('Please register the Event first')
-            router.push('/events/event1')
+            router.push('/')
           }
         } else {
           router.push('/userDetails');
@@ -136,6 +136,7 @@ export default function LeaderDashboard() {
       })
       .then(() => {
         setRemove(!remove);
+        location.reload();
         toast.success('Member removed successfully.');
       });
   }
@@ -158,8 +159,9 @@ export default function LeaderDashboard() {
       .then((res) => res.json())
       .then((data) => {})
       .then(() => {
-        router.push('/events/event1/makeTeam');
+        // router.push('/events/event1/makeTeam');
         toast.success('Team Deleted.');
+        window.location.href='/mySchedule';
         setIsLoading(false);
       })
       .catch(() => {
@@ -170,7 +172,7 @@ export default function LeaderDashboard() {
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center min-h-screen"
+      className="bg-cover bg-no-repeat bg-center min-h-screen py-10"
       // style={{ backgroundImage: 'url(/assets/bg/spceBg.svg)' }}
       >
       {isLoading && <Loader/>}
@@ -276,7 +278,7 @@ export default function LeaderDashboard() {
   //       {teamMembersData?.map((ele) => (
   //         <li className="mx-4 list-none w-full self-center" key={ele}>
   //           {ele._id ===  teamLeaderId? (
-  //             <div className="flex flex-row justify-evenly p-8 m-4 text-lg h-full w-auto bg-black rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
+  //             <div className="flex flex-row justify-evenly p-8 m-4 text-lg h-full w-auto bg-[#0E0E0E] rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
   //               <div className="w-3/4 h-5/6 flex justify-evenly">
   //               <div>
   //                 <p className="font-black text-yellow-200 text-4xl m-2">
@@ -300,7 +302,7 @@ export default function LeaderDashboard() {
   //             </button> */}
   //             </div>
   //           ) : (
-  //             <div className="flex flex-row justify-around p-5 m-2 text-lg h-full w-auto bg-black rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
+  //             <div className="flex flex-row justify-around p-5 m-2 text-lg h-full w-auto bg-[#0E0E0E] rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
   //               <div className="w-3/4 h-5/6 flex justify-evenly">
   //               <div>
   //                 <p className="font-black text-yellow-200 text-4xl m-2 flex flex-wrap">

@@ -20,15 +20,12 @@ const gettokenfrombackend = async (user, account) => {
   await connectMongoDB();
   const token = account.id_token;
   const email = user.email;
-  //console.log("------",email);
   const ticket = await client.verifyIdToken({
     idToken: token,
     audience: process.env.GOOGLE_CLIENT_ID,
   });
   const user1 = await Users.findOne({ email: email });
-  console.log(user1);
   const { accessToken, refreshToken } = await generateTokens(user1);
-  console.log(accessToken);
   return accessToken;
 
   //const { email } = ticket.getPayload();
@@ -44,13 +41,10 @@ const authOptions = {
   callbacks: {
     async signIn({ user, account }) {
       const { name, email } = user;
-      console.log('User', user);
-      console.log('Account', account);
       if (account.provider === 'google') {
         try {
           await connectMongoDB();
           const userExists = await Users.findOne({ email });
-          console.log("userExists", userExists);
           if (!userExists) {
             const res = await fetch(`${process.env.NEXTAUTH_URL}/api/register`,
               {
@@ -68,14 +62,12 @@ const authOptions = {
               return user;
             }
           } else {
-            console.log('User has already registerd');
             return NextResponse.json({
               message: 'User has already registered',
               status: 200,
             });
           }
         } catch (error) {
-          console.log(error);
         }
       }
     },

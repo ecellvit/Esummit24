@@ -4,7 +4,7 @@ import { FaAngleUp } from "react-icons/fa6";
 const Accordian = (props) => {
   const showAns = (props.showAnsNumber === props.id)
   return (
-    <div className="w-full">
+    <div className="w-full text-white">
       <motion.div className="w-full flex flex-col gap-3">
         <motion.div
           className="w-full flex items-center justify-between hover:cursor-pointer"

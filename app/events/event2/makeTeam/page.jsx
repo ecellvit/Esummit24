@@ -107,7 +107,7 @@ const MakeTeam = () => {
   };
 
   return (
-    <div className=" bg-cover bg-no-repeat bg-center">
+    <div className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center">
       <Toaster />
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="w-[60%] sm:w-[55vw] flex flex-col items-center justify-around text-white rounded-lg p-2 min-w-fit min-h-[70vh] m-12 border-2 border-[#D6993F]">

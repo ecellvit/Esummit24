@@ -6,7 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import eSummit from "@/public/assets/logos/esummitLogo.svg";
 import toast, { Toaster } from "react-hot-toast";
-import Navbar from "@/components/Navbar";
 
 export default function UserDetails() {
   const { data: session, status } = useSession();
@@ -46,16 +45,10 @@ export default function UserDetails() {
   };
 
   const handleSubmit = async () => {
-    console.log("button ");
-    console.log(firstName);
-    console.log(lastName);
 
     const regNoNew = document.getElementById("regNo").value;
     const isValidInput = /^[2][0-3][a-zA-Z]{3}\d{4}$/.test(regNoNew.trim());
-    console.log(isValidInput);
     if (isValidInput) {
-      setRegError(false);
-      console.log(regError);
     } else {
       setRegError(true);
     }
@@ -63,8 +56,6 @@ export default function UserDetails() {
     if (mobNo !== "" && regNo !== "") {
       if (mobNo.length === 10) {
         if (isValidInput && regNo.length === 9) {
-          console.log(mobNo);
-          console.log(regNo);
           try {
             const response = await fetch("/api/userDetails", {
               method: "POST",
@@ -82,7 +73,6 @@ export default function UserDetails() {
             });
 
             if (response.ok) {
-              console.log("Data saved successfully");
 
               // setFirstName('');
               // setLastName('');
@@ -92,11 +82,9 @@ export default function UserDetails() {
 
               router.push("/");
             } else {
-              console.log("Failed to save data:", response.statusText);
               toast.error("Failed to save data");
             }
           } catch (error) {
-            console.log("Error saving data:", error);
             toast.error("Server Error");
           }
         } else {
@@ -111,9 +99,7 @@ export default function UserDetails() {
   };
 
   return (
-    <main className="min-w-[100vw] min-h-[100vh] flex justify-center items-center bg-black">
-    <Navbar/>
-      {/* {isLoading && <LoadingScreen/>} */}
+    <main className="min-w-[100vw] min-h-[100vh] flex justify-center items-center bg-[#0E0E0E] pt-4">
       <div className="flex flex-col md:flex-row w-full h-[80vh] md:h-[90vh] justify-evenly items-center">
         <div
           className="hidden md:w-100 h-5/6 md:flex flex-col justify-center px-4 pb-5 pt-3 rounded-3xl border-solid border-2 border-[#D6993F]"

@@ -13,7 +13,6 @@ export default function Page() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    console.log('uussee');
     if (status === 'unauthenticated') {
       router.push('/');
     } else if (status === 'authenticated') {
@@ -44,7 +43,6 @@ export default function Page() {
         }
       })
       .catch((err) => {
-        console.log('err', err);
       });
   };
 

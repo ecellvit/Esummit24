@@ -10,6 +10,8 @@ export default function Schedule({ scheduleRef }) {
   const { data: session, status } = useSession();
   const [loader, setLoader] = useState(false);
   const [userDetails, setUserDeatials] = useState(null);
+  const [event2Reg, setEvent2Reg] = useState(false);
+  const [event1Reg, setEvent1Reg] = useState(false);
   useEffect(() => {
     fetch("/api/userDetails", {
       content: "application/json",
@@ -27,10 +29,10 @@ export default function Schedule({ scheduleRef }) {
       .catch((err) => {
         userDetails.user.events = [];
       });
-  },[]);
+  }, []);
   return (
     <section
-    id="schedule"
+      id="schedule"
       ref={scheduleRef}
       className="bg-black min-h-screen flex flex-col justify-center items-center"
     >
@@ -85,9 +87,13 @@ export default function Schedule({ scheduleRef }) {
                       setLoader={setLoader}
                       event={ele.id}
                       token={session?.accessTokenBackend}
+                      setEvent1Reg={setEvent1Reg}
+                      setEvent2Reg={setEvent2Reg}
                     />
                     {(ele.id === 1 || ele.id === 2) &&
-                      userDetails?.user?.events?.includes(ele.id) && (
+                      (userDetails?.user?.events?.includes(ele.id) ||
+                        (ele.id == 1 && event1Reg) ||
+                        (ele.id == 2 && event2Reg)) && (
                         <button
                           className="text-black font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
                           onClick={() => {
@@ -139,9 +145,13 @@ export default function Schedule({ scheduleRef }) {
                       setLoader={setLoader}
                       event={ele.id}
                       token={session?.accessTokenBackend}
+                      setEvent1Reg={setEvent1Reg}
+                      setEvent2Reg={setEvent2Reg}
                     />
-                    {(ele.id === 0 || ele.id === 1) &&
-                      userDetails?.user?.events?.includes(ele.id) && (
+                    {(ele.id === 1 || ele.id === 2) &&
+                      (userDetails?.user?.events?.includes(ele.id) ||
+                        (ele.id == 1 && event1Reg) ||
+                        (ele.id == 2 && event2Reg)) && (
                         <button
                           className="text-black font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
                           onClick={() => {

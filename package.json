@@ -30,12 +30,15 @@
     "react-loading": "^2.0.3",
     "react-loading-icons": "^1.1.0",
     "react-scroll": "^1.9.0",
+    "react-timeline-animation": "^1.2.3",
     "react-timer-hook": "^3.0.7",
+    "react-vertical-timeline-component": "^3.6.0",
     "tailwind-merge": "^2.2.2",
     "toaster": "^0.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
+    "daisyui": "^4.10.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
     "postcss": "^8",

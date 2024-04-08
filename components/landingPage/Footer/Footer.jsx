@@ -10,13 +10,13 @@ import Marq from "./Marq";
 export const Footer = () => {
   return (
     <>
-      <footer className="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-0 mx-5 sm:mx-10 ms:mx-20 justify-between py-5">
+      <footer className="flex flex-col-reverse md:flex-row bg-[url('/assets/landingPage/footer/bg.png')] bg-cover items-center gap-10 md:gap-0 px-5 sm:px-10 ms:px-20 justify-between py-5">
         <div className="flex gap-10">
           <ul className="hidden md:flex uppercase flex-col gap-2">
-            <li>home</li>
-            <li>about</li>
-            <li>schedule</li>
-            <li>speaker</li>
+            <Link href={"/"}><li>home</li></Link>
+            <Link href={"/#about"}><li>about</li></Link>
+            <Link href={"/#schedule"}><li>schedule</li></Link>
+            <Link href={"/#speakers"}><li>speaker</li></Link>
           </ul>
           <div className="uppercase flex flex-col gap-2">
             <p className="text-lg font-semibold m-0">community</p>

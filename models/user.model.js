@@ -40,12 +40,12 @@ const userSchema = new Schema(
     event1Consent: {
       type: Boolean,
       default: false,
-      ref: "Event1"
+      ref: "Event1",
     },
     event2Consent: {
       type: Boolean,
       default: false,
-      ref: "Event2"
+      ref: "Event2",
     },
   },
   { collection: "Users" }

@@ -6,7 +6,7 @@ export default function SignInBtn() {
   const { status } = useSession();
 
   return (
-    <div className="flex text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg">
+    <div className="flex text-black font-bold text-xl md:text-sm bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-3 rounded-lg">
       {status === "authenticated" ? (
         <button
           onClick={() => {signOut();}} >

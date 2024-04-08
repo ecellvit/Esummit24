@@ -107,7 +107,7 @@ const MakeTeam = () => {
   };
 
   return (
-    <div className=" bg-cover bg-no-repeat bg-center">
+    <div className="bg-[#0E0E0E]  bg-cover bg-no-repeat bg-center">
       <Toaster />
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="w-[60%] sm:w-[55vw] flex flex-col items-center justify-around text-white rounded-lg p-2 min-w-fit min-h-[70vh] m-12 border-2 border-[#D6993F]">
@@ -153,16 +153,14 @@ const MakeTeam = () => {
             <div className="border-b border-gray-300 w-5/6 my-1 mb-4"></div>
           )}
           <div className="m-2">
-            {!showConsent && (
-              <button
-                onClick={() => {
-                  router.push("/events/event1/termsConditions");
-                }}
-                className="text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-              >
-                I dont have a Team
-              </button>
-            )}
+            <button
+              onClick={() => {
+                router.push("/events/event1/termsConditions");
+              }}
+              className="text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            >
+              I dont have a Team
+            </button>
           </div>
         </div>
       </div>

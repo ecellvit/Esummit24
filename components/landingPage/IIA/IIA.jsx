@@ -28,5 +28,5 @@ export const IIA = () => {
   const cards = data.map((item) => (
     <IIACard key={item.title} img={item.img} title={item.title} description={item.description} />
   ));
-  return <section className="flex flex-col items-center md:flex-row w-full justify-around px-10 gap-5">{cards}</section>;
+  return <section className="flex flex-col bg-[#0E0E0E] items-center md:flex-row w-full justify-around px-10 gap-5">{cards}</section>;
 };

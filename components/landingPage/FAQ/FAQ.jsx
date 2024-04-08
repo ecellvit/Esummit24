@@ -16,29 +16,46 @@ const FAQ = () => {
   const faqs = [
     {
       id: 1,
-      q: "Is it compulsory to participate in a team?",
-      ans: ["Yes, it is compulsory to participate as a team."],
-    },
-    {
-      id: 2,
-      q: "What is the team size?",
-      ans: ["Team can consists 3 to 4 members."],
-    },
-    {
-      id: 3,
-      q: "I’m interested in participating but I’m unable to find a team. What should I do?",
-      ans: ["You can register without a team, we will provide a team for you."],
-    },
-    {
-      id: 4,
-      q: "Will there be any registration fees?",
+      q: " Will there be any registration fees?",
       ans: ["No, the event is free of cost."],
     },
     {
-      id: 5,
-      q: "Do I need to have a business idea ready?",
+      id: 2,
+      q: "What is the duration of the event?",
       ans: [
-        "No, we provide support for idea development throughout the event - just bring your enthusiasm!",
+        "There are a total of 6 events scheduled within 4 days, each with different duration and venues. Scroll above for the required event details.",
+      ],
+    },
+    {
+      id: 3,
+      q: "Will ODs be provided for the event?",
+      ans: [
+        "Yes, ODs will be provided for all events, throughout the duration of the events.",
+      ],
+    },
+    {
+      id: 4,
+      q: "Will there be cash prize for competitions?",
+      ans: [
+        "Yes, both the competitions, Ideathon and Innoventure, will have their respective cash prizes. All details will be released on the social media handles.",
+      ],
+    },
+    {
+      id: 5,
+      q: "Is there a limit for E-talk ?",
+      ans: [
+        "The limit for E-talk is 1500 people, it’s scheduled for 15th April from 2pm-7pm.",
+      ],
+    },
+    {
+      id: 6,
+      q: "I still have some doubts regarding the event, how can i get them resolved?",
+      ans: [
+        "Contact the following POC’s for assistance:",
+        "1. Arjun Bector - 9914500336",
+        "2. Vaibhav - 8074911266",
+        "3. Archi - 9993310304",
+        "4. Saket DB- 7387776883",
       ],
     },
   ];
@@ -53,7 +70,7 @@ const FAQ = () => {
   ));
 
   return (
-    <section className="relative min-h-[80vh] w-full flex justify-center items-center">
+    <section className="relative min-h-[60vh] sm:min-h-[80vh] bg-[#0E0E0E] w-full flex justify-center items-center font-poppins">
       <div className="flex flex-col sm:flex-row gap-10 items-center w-3/4">
         <div className="w-full sm:w-1/2 flex sm:flex-col items-center gap-5 sm:gap-0">
           <div className="text-left">
