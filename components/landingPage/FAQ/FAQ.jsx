@@ -23,7 +23,7 @@ const FAQ = () => {
       id: 2,
       q: "What is the duration of the event?",
       ans: [
-        "There are a total of 6 events scheduled within 4 days, each with different duration and venues. Scroll above for the required event details.",
+        "There are a total of 5 events scheduled within 4 days, each with different duration and venues. Scroll above for the required event details.",
       ],
     },
     {

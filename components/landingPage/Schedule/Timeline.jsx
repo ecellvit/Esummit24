@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import RegisterButton from "@/components/events/RegisterButton";
 
-const Timeline = ({ scheduleRef }) => {
+const Timeline = ({ scheduleRef, caps }) => {
   const [loader, setLoader] = useState(false);
   const { data: session, status } = useSession();
   const [userDetails, setUserDeatials] = useState(null);
@@ -48,16 +48,25 @@ const Timeline = ({ scheduleRef }) => {
         >
           <p className="text-justify">{event.description}</p>
           <div className="flex gap-3 py-2">
-            <RegisterButton
-              loader={loader}
-              setLoader={setLoader}
-              event={event.id}
-              token={session?.accessTokenBackend}
-              setEvent1Reg={setEvent1Reg}
-              setEvent2Reg={setEvent2Reg}
-              existingUserDetails={userDetails}
-              setExsitingUserDetials={setUserDeatials}
-            />
+            {caps &&
+            caps["event" + event.id] === true &&
+            !userDetails?.user?.events?.includes(event.id) ? (
+              <div className="text-white font-semibold text-lg">
+                Registrations Closed
+              </div>
+            ) : (
+              <RegisterButton
+                loader={loader}
+                setLoader={setLoader}
+                event={event.id}
+                token={session?.accessTokenBackend}
+                setEvent1Reg={setEvent1Reg}
+                setEvent2Reg={setEvent2Reg}
+                existingUserDetails={userDetails}
+                setExsitingUserDetials={setUserDeatials}
+              />
+            )}
+
             {(event.id === 1 || event.id === 2) &&
               (userDetails?.user?.events?.includes(event.id) ||
                 (event.id == 1 && event1Reg) ||
@@ -116,10 +125,10 @@ const Timeline = ({ scheduleRef }) => {
     >
       {loader && <Loader />}
       <div className="flex flex-col justify-center items-center w-full">
-          <h1 className="uppercase mt-10 mb-5 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] bg-clip-text text-transparent">
-            schedule
-          </h1>
-        <p className="w-2/3 text-sm md:text-md  text-center font-poppins text-white">
+        <h1 className="uppercase mt-10 mb-5 text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] bg-clip-text text-transparent">
+          schedule
+        </h1>
+        <p className="w-2/3 text-sm md:text-lg  text-center font-poppins text-white">
           Welcome to E-Summit 2024! Dive into a world of unparalleled
           opportunities with our meticulously planned events and sessions,
           designed to keep you motivated and engaged throughout the fest.

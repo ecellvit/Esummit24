@@ -45,7 +45,7 @@ export async function GET(req, { params }) {
       const currentTime = new Date();
       const tokenCreationTime = token.createdAt;
       const timeDifference = (currentTime - tokenCreationTime) / (1000 * 60);
-      if (timeDifference > 10) {
+      if (timeDifference > 30) {
         const newTeamCode = customAlphabet(
           "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
           10

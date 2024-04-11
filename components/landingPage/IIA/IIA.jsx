@@ -7,16 +7,16 @@ import innovate from "@/public/assets/landingPage/IIA/innovate.svg";
 export const IIA = () => {
   const data = [
     {
-      img: innovate,
-      title: "Innovate",
-      description:
-        "Provide a unique and workable concept to stand out from the competitors.",
-    },
-    {
       img: ideate,
       title: "Ideate",
       description:
         "Generate and explore creative ideas to solve a problem or achieve a goal.",
+    },
+    {
+      img: innovate,
+      title: "Innovate",
+      description:
+        "Provide a unique and workable concept to stand out from the competitors.",
     },
     {
       img: actuate,
@@ -26,7 +26,16 @@ export const IIA = () => {
     },
   ];
   const cards = data.map((item) => (
-    <IIACard key={item.title} img={item.img} title={item.title} description={item.description} />
+    <IIACard
+      key={item.title}
+      img={item.img}
+      title={item.title}
+      description={item.description}
+    />
   ));
-  return <section className="flex flex-col bg-[#0E0E0E] items-center md:flex-row w-full justify-around px-10 gap-5">{cards}</section>;
+  return (
+    <section className="flex flex-col bg-[#0E0E0E] items-center md:flex-row w-full justify-around px-10 gap-5">
+      {cards}
+    </section>
+  );
 };

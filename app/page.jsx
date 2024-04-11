@@ -14,18 +14,60 @@ import FAQ from "@/components/landingPage/FAQ/FAQ";
 import { Footer } from "@/components/landingPage/Footer/Footer";
 import About from "@/components/landingPage/About";
 import Who from "@/components/landingPage/Who";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Timeline from "@/components/landingPage/Schedule/Timeline";
 import Temp from "@/components/landingPage/Speaker/Temp";
+import Loader from "@/components/Loader";
 
 export default function Home() {
+  const router = useRouter();
   const scheduleRef = useRef(null);
   const [regOpen, setRegOpen] = useState(true);
+  const [loader, setLoader] = useState(false);
+  const [caps, setCaps] = useState(null);
 
   const { data: session, status } = useSession();
-
-  const router = useRouter();
-
+  useEffect(() => {
+    setLoader(true);
+    fetch("https://members-esummit.onrender.com/getcapacity")
+      .then((res) => res.json())
+      .then((data) => {
+        setCaps(data.caps);
+        setLoader(false);
+      })
+      .catch((err) => {
+        setLoader(false);
+      });
+  }, []);
+  useEffect(() => {
+    setLoader(true);
+    if (status === "authenticated") {
+      console.log("inside if");
+      fetch("/api/userDetails", {
+        content: "application/json",
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${session?.accessTokenBackend}`,
+          "Access-Control-Allow-Origin": "*",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (status === "authenticated" && !data.user.hasFilledDetails) {
+            console.log("pushing to userdetails");
+            router.push("/userDetails");
+          }
+          setLoader(false);
+        })
+        .catch((err) => {
+          setLoader(false);
+          console.log(err);
+        });
+    } else {
+      setLoader(false);
+    }
+  }, [status]);
   // if (status === "authenticated") {
   //     router.push('/userDetails')
   // } else {
@@ -43,6 +85,7 @@ export default function Home() {
   // }
   return (
     <>
+      {loader && <Loader />}
       <HeroSection
         scheduleRef={scheduleRef}
         regOpen={regOpen}
@@ -52,10 +95,10 @@ export default function Home() {
       <About />
       <Who />
       {/* <Schedule scheduleRef={scheduleRef} /> */}
-      <Timeline scheduleRef={scheduleRef} />
-      <Temp/> {/* temp for speakers section */}
+      <Timeline scheduleRef={scheduleRef} caps={caps} />
+      <Temp /> {/* temp for speakers section */}
       {/* <Speakers /> */}
-      {/* <Sponsors /> */}
+      <Sponsors />
       <FAQ />
       <Footer />
     </>

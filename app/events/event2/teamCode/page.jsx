@@ -83,7 +83,7 @@ export default function TeamCode() {
   };
 
   return (
-    <main className="min-h-[100vh] items-center flex flex-col justify-center">
+    <main className="bg-[#0E0E0E] min-h-[100vh] items-center flex flex-col justify-center">
       <Toaster />
       {/* <Image
         alt="bg"

@@ -88,35 +88,35 @@ const Navbar = () => {
                   className="group text-white transition duration-300"
                 >
                   <li className="cursor-pointer">home</li>
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
                 <Link
                   href={"/#about"}
                   className="group text-white transition duration-300"
                 >
                   <li className="cursor-pointer">about</li>
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
                 <Link
                   href={"/mySchedule"}
                   className="group text-white transition duration-300"
                 >
                   <li className="cursor-pointer">my schedule</li>
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
                 <Link
                   href={"/ourPatrons"}
                   className="group text-white transition duration-300"
                 >
                   <li className="cursor-pointer">our  patrons</li>
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
                 <Link
                   href={"/#speakers"}
                   className="group text-white transition duration-300"
                 >
                   <li className="cursor-pointer">speakers</li>
-                  <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-white"></span>
                 </Link>
                 <SignInBtn />
               </ul>

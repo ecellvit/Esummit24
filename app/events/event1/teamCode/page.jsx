@@ -17,8 +17,9 @@ export default function TeamCode() {
 
   useEffect(() => {
     if (status === 'unauthenticated') {
-      // router.push("/")
+      router.push("/")
     } else if (status === 'authenticated') {
+      router.push('/');
       getUserData();
     }
   }, [status, router]);
@@ -83,7 +84,7 @@ export default function TeamCode() {
   };
 
   return (
-    <main className="min-h-[100vh] items-center flex flex-col justify-center">
+    <main className="bg-[#0E0E0E] min-h-[100vh] items-center flex flex-col justify-center">
       <Toaster />
       {/* <Image
         alt="bg"
@@ -91,7 +92,7 @@ export default function TeamCode() {
         fill
         className="object-cover z-[-10]"
       /> */}
-      <div className="h-[45vh] w-[45vw] flex flex-col items-center justify-around text-white rounded-lg p-3 min-w-fit min-h-fit border-2 border-[#D6993F]">
+      <div className="bg-[#0E0E0E] h-[45vh] w-[45vw] flex flex-col items-center justify-around text-white rounded-lg p-3 min-w-fit min-h-fit border-2 border-[#D6993F]">
        
         <h1 className="text-4xl sm:text-5xl font-bold">
           {loading ? <LoadingIcons.Oval /> : teamName}

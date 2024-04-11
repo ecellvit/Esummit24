@@ -9,6 +9,7 @@ const scheduleDetails = [
     image: image,
     venue: "MGB HALL",
     time: "10:30 AM to 07:00 PM",
+    whatsapp: "https://chat.whatsapp.com/E9iJqPqJbMHBUCn2GfCf1N",
   },
   {
     id: 3,
@@ -19,6 +20,7 @@ const scheduleDetails = [
     image: image,
     venue: "Sarojini naidu gallery, sjt",
     time: "10:00 AM to 12:00 PM",
+    whatsapp: "",
   },
   {
     id: 4,
@@ -29,6 +31,7 @@ const scheduleDetails = [
     image: image,
     venue: "MGB hall",
     time: "02:00 PM to 07:00 PM",
+    whatsapp: "",
   },
   {
     id: 5,
@@ -39,6 +42,7 @@ const scheduleDetails = [
     image: image,
     venue: "ANNA AUDITORIUM",
     time: "02:00 PM to 07:00 PM",
+    whatsapp: "",
   },
   {
     id: 2,
@@ -49,7 +53,9 @@ const scheduleDetails = [
     image: image,
     venue: "mgb hall",
     time: "10:00 AM to 05:00 PM",
+    whatsapp: "https://chat.whatsapp.com/EIxnuFBAJheHUTcGm5B0zr",
   },
 ];
 
 export default scheduleDetails;
+

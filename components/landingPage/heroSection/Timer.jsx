@@ -1,5 +1,5 @@
 import Countdown from "react-countdown";
-const time = new Date("April 11, 2024 11:59:59").getTime();
+const time = new Date("April 12, 2024 23:59:59").getTime();
 function convertToDoubleDigit(number) {
   // Check if the number is less than 10
   if (number < 10) {

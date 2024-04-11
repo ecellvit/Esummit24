@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const teamSchema = mongoose.Schema(
+const teamSchemaTest = mongoose.Schema(
   {
     teamName: {
       type: String,
@@ -19,10 +19,6 @@ const teamSchema = mongoose.Schema(
     leaderEmail: {
       type: String,
     },
-    isQualified: {
-      type: Boolean,
-      default: false,
-    },
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -36,6 +32,6 @@ const teamSchema = mongoose.Schema(
   { collection: 'Event1' }
 );
 
-export const Event1 =
-  mongoose.models.Event1 ||
-  mongoose.model('Event1', teamSchema);
+export const Event1Test =
+  mongoose.models.Event1Test ||
+  mongoose.model('Event1Test', teamSchemaTest);

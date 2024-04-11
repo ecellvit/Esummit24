@@ -20,6 +20,7 @@ const MakeTeam = () => {
       router.push("/");
     } else if (status === "authenticated") {
       // toast.success("Logged In");
+      router.push('/')
       getUserData();
     }
   }, [status, router]);
@@ -49,10 +50,11 @@ const MakeTeam = () => {
             }
           } else {
             toast.error("Please Register the Event first");
-            router.push("/events/event1");
+            router.push("/");
           }
         } else {
-          router.push("/userDetails");
+          // router.push("/userDetails");
+          router.push('/');
         }
       });
   };
@@ -103,13 +105,14 @@ const MakeTeam = () => {
 
   const handleJoinTeam = () => {
     // Redirect to JoinTeam page
-    router.push("/events/event1/joinTeam");
+    // router.push("/events/event1/joinTeam");
+    router.push('/')
   };
 
   return (
     <div className="bg-[#0E0E0E]  bg-cover bg-no-repeat bg-center">
       <Toaster />
-      <div className="flex flex-col justify-center items-center h-screen">
+      <div className="bg-[#0E0E0E] flex flex-col justify-center items-center h-screen">
         <div className="w-[60%] sm:w-[55vw] flex flex-col items-center justify-around text-white rounded-lg p-2 min-w-fit min-h-[70vh] m-12 border-2 border-[#D6993F]">
           <p className="text-xl sm:text-2xl md:text-4xl font-bold m-2 mb-4 text-center">
             Join or Create a Team
@@ -149,9 +152,9 @@ const MakeTeam = () => {
               )}
             </button>
           </div>
-          {!showConsent && (
+          {/* {!showConsent && ( */}
             <div className="border-b border-gray-300 w-5/6 my-1 mb-4"></div>
-          )}
+          {/* )} */}
           <div className="m-2">
             <button
               onClick={() => {

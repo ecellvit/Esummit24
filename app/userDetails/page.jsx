@@ -6,15 +6,20 @@ import { useState } from "react";
 import Image from "next/image";
 import eSummit from "@/public/assets/logos/esummitLogo.svg";
 import toast, { Toaster } from "react-hot-toast";
+import Loader from "@/components/Loader";
 
 export default function UserDetails() {
   const { data: session, status } = useSession();
+  if (status === "unauthenticated") {
+    window.location.href = "/";
+  }
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [regNo, setRegNo] = useState("");
   const [mobNo, setMobNo] = useState("");
   const [regError, setRegError] = useState(true);
+  const [loader, setLoader] = useState(false);
   const router = useRouter();
 
   const handleFirstnameChange = (e) => {
@@ -45,7 +50,6 @@ export default function UserDetails() {
   };
 
   const handleSubmit = async () => {
-
     const regNoNew = document.getElementById("regNo").value;
     const isValidInput = /^[2][0-3][a-zA-Z]{3}\d{4}$/.test(regNoNew.trim());
     if (isValidInput) {
@@ -56,6 +60,7 @@ export default function UserDetails() {
     if (mobNo !== "" && regNo !== "") {
       if (mobNo.length === 10) {
         if (isValidInput && regNo.length === 9) {
+          setLoader(true);
           try {
             const response = await fetch("/api/userDetails", {
               method: "POST",
@@ -73,18 +78,38 @@ export default function UserDetails() {
             });
 
             if (response.ok) {
-
-              // setFirstName('');
-              // setLastName('');
-              setRegNo("");
-              setMobNo("");
               toast.success("Details submitted successfully");
-
+              const eventId = localStorage.getItem("event");
+              if (!eventId) setLoader(false);
+              if (eventId) {
+                localStorage.removeItem("event");
+                fetch(`/api/event${eventId}/register`, {
+                  content: "application/json",
+                  method: "GET",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${session.accessTokenBackend}`,
+                    "Access-Control-Allow-Origin": "*",
+                  },
+                })
+                  .then((res) => {
+                    if (res.status === 200) {
+                      toast.success("Event registered successfully.");
+                      setLoader(false);
+                      window.location.href = "/mySchedule";
+                      return;
+                    }
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+              }
               router.push("/");
             } else {
               toast.error("Failed to save data");
             }
           } catch (error) {
+            console.log(error);
             toast.error("Server Error");
           }
         } else {
@@ -100,6 +125,7 @@ export default function UserDetails() {
 
   return (
     <main className="min-w-[100vw] min-h-[100vh] flex justify-center items-center bg-[#0E0E0E] pt-4">
+      {loader && <Loader />}
       <div className="flex flex-col md:flex-row w-full h-[80vh] md:h-[90vh] justify-evenly items-center">
         <div
           className="hidden md:w-100 h-5/6 md:flex flex-col justify-center px-4 pb-5 pt-3 rounded-3xl border-solid border-2 border-[#D6993F]"
@@ -117,7 +143,6 @@ export default function UserDetails() {
 
         <div
           className="w-4/5 md:w-1/2 h-5/6 flex flex-col justify-evenly md:justify-around items-start rounded-3xl px-4 border-solid border-2 border-[#D6993F]"
-
           style={{ backgroundColor: "black" }}
         >
           <div className="flex justify-start items-center">
@@ -200,7 +225,7 @@ export default function UserDetails() {
                 onClick={handleSubmit}
                 className="text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] hover:bg-gradient-to-br hover:from-amber-400 hover:via-amber-200 hover:to-yellow-400 focus:outline-none focus:ring-cyan-800 dark:focus:ring-cyan-300 font-medium rounded-3xl text-lg px-5 py-2 text-center me-2 mb-2"
               >
-                Register
+                Continue
               </button>
               <Toaster />
             </div>

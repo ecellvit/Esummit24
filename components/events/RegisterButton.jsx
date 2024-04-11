@@ -49,6 +49,7 @@ const RegisterButton = ({
   }, []);
   const registerEvent = () => {
     if (!token) {
+      localStorage.setItem("event", JSON.stringify(event));
       signIn("google");
 
       return;

@@ -18,19 +18,18 @@ const JoinTeam = ({ teamCode: propTeamCode }) => {
   const { data: session, status } = useSession();
 
   useEffect(() => {
-      if (status === "unauthenticated") {
-        //Checks if session is not ready and redirects to root.
+    if (status === "unauthenticated") {
+      //Checks if session is not ready and redirects to root.
 
-        router.push("/");
-      } else if (status === "authenticated") {
-
-        // toast.success("Logged In");
-        getUserData();
-        localStorage.setItem('asdf', 'asdf')
-      }
+      router.push("/");
+    } else if (status === "authenticated") {
+      // toast.success("Logged In");
+      getUserData();
+      localStorage.setItem("asdf", "asdf");
+    }
   }, [status, router]);
 
-  const getUserData = ()=>{
+  const getUserData = () => {
     fetch(`/api/userDetails`, {
       content: "application/json",
       method: "GET",
@@ -42,24 +41,25 @@ const JoinTeam = ({ teamCode: propTeamCode }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-
         const user = data.user;
         if (user.hasFilledDetails == false) {
-          router.push('/userDetails');
+          router.push("/userDetails");
         } else {
-          if((user.events).includes(2)){
-            if (user.event2TeamId ) {
-              const redirect = user.teamRole=='1' ? '/events/event2/memberDash' : '/events/event2/leaderDash';
+          if (user.events.includes(2)) {
+            if (user.event2TeamId) {
+              const redirect =
+                user.teamRole == "1"
+                  ? "/events/event2/memberDash"
+                  : "/events/event2/leaderDash";
               router.push(redirect);
             }
-          }else{
-            toast.error('Please register the Event first');
-            router.push('/events/event2')
+          } else {
+            toast.error("Please register the Event first");
+            router.push("/events/event2");
           }
         }
-
-      })
-  }
+      });
+  };
 
   useEffect(() => {
     if (propTeamCode) {
@@ -98,7 +98,7 @@ const JoinTeam = ({ teamCode: propTeamCode }) => {
         setShowDialog(true); // Show the dialog box
       } else {
         showMessage("Team code not found. Please try again.");
-        setisLoading(fasle);
+        setisLoading(false);
       }
     } catch (error) {
       console.log("Error fetching team name:", error);
@@ -149,9 +149,7 @@ const JoinTeam = ({ teamCode: propTeamCode }) => {
   };
 
   return (
-    <div
-      className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center"
-    >
+    <div className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center">
       <div className="flex flex-col justify-center items-center h-screen ">
         <div className="w-[60%] sm:w-[55vw] bg-[#0E0E0E] flex flex-col items-center justify-evenly text-white rounded-lg min-w-fit min-h-[70vh] border-2 border-[#D6993F]">
           <h1 className="text-[2.8rem] font-bold m-2 text-center">
@@ -224,7 +222,10 @@ const JoinTeam = ({ teamCode: propTeamCode }) => {
                   </button>
                   <button
                     className="text-gray-500 dark:text-gray-300 bg-gray-200 dark:bg-gray-600 rounded px-4 py-2 hover:bg-gray-300 dark:hover:bg-gray-500 focus:outline-none"
-                    onClick={() => setShowDialog(false)}
+                    onClick={() => {
+                      setShowDialog(false);
+                      setisLoading(false);
+                    }}
                   >
                     No
                   </button>

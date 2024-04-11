@@ -172,12 +172,12 @@ export default function LeaderDashboard() {
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center min-h-screen py-10"
+      className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center min-h-screen py-10"
       // style={{ backgroundImage: 'url(/assets/bg/spceBg.svg)' }}
       >
       {isLoading && <Loader/>}
 
-      <div className="max-w-screen-xl mx-auto p-4 text-center">
+      <div className="bg-[#0E0E0E] max-w-screen-xl mx-auto p-4 text-center">
         <h1 className="text-3xl font-bold mb-4 mt-8 text-white">
           Team : {teamName}
         </h1>
@@ -205,7 +205,7 @@ export default function LeaderDashboard() {
             Start FP 9.0
           </button>
         )} */}
-        {teamMembersData.length < 4 && (
+        {/* {teamMembersData.length < 4 && (
           <Link
             className="text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] hover:bg-gradient-to-br hover:from-amber-400 hover:via-amber-200 hover:to-yellow-400 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'"
             href="/events/event1/teamCode"
@@ -213,7 +213,7 @@ export default function LeaderDashboard() {
             {" "}
             Add Members{" "}
           </Link>
-        )}
+        )} */}
         <div className="flex flex-wrap justify-center">
           {teamMembersData.map((el) => {
             return (
@@ -248,9 +248,9 @@ export default function LeaderDashboard() {
           Start Quiz
         </button> */}
 
-        <DeleteTeamButton onClick={() => deleteTeam()} />
+        {/* <DeleteTeamButton onClick={() => deleteTeam()} /> */}
 
-        {isQualified && (
+        {/* {isQualified && (
           <div className="flex flex-col text-white items-center border p-2 rounded-xl my-2">
             <h1 className="text-lg font-bold">
               Congratulations! Your team has been shortlisted for the
@@ -261,7 +261,7 @@ export default function LeaderDashboard() {
             <h6>Reporting Time : 9 AM</h6>
             <h6>Venue : Sarojini Naidu Hall, SJT</h6>
           </div>
-        )}
+        )} */}
         <Toaster />
       </div>
     </div>

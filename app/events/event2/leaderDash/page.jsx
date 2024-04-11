@@ -169,12 +169,12 @@ export default function LeaderDashboard() {
 
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center min-h-screen py-10"
+      className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center min-h-screen py-10"
       // style={{ backgroundImage: 'url(/assets/bg/spceBg.svg)' }}
     >
       {isLoading && <Loader />}
 
-      <div className="max-w-screen-xl mx-auto p-4 text-center">
+      <div className="bg-[#0E0E0E] max-w-screen-xl mx-auto p-4 text-center">
         <h1 className="text-3xl font-bold mb-4 mt-8 text-white">
           Team : {teamName}
         </h1>

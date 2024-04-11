@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
+import mu from "@/public/assets/landingPage/sponsors/mu.png"
 export default function Sponsors() {
   return (
-    <section className="mx-10 md:mx-20">
-      <div className="flex items-center mt-10 mb-5 text-center">
+    <section className="px-10 md:px-20 bg-[#0E0E0E]">
+      <div className="flex items-center pt-10 pb-5 text-center">
         <h1 className="uppercase w-full md:w-fit text-4xl md:text-5xl lg:text-5xl font-bold bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] bg-clip-text text-transparent">
           sponsors
         </h1>
@@ -16,7 +18,11 @@ export default function Sponsors() {
           ></motion.div>
         </div>
       </div>
-      <div className="h-[50vh]"></div>
+      <div className="h-fit flex justify-center pt-20">
+        <div>
+          <Image className="h-14 w-auto" src={mu}/>
+        </div>
+      </div>
     </section>
   );
 }

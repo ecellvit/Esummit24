@@ -17,17 +17,17 @@ const About = () => {
     //     </p>
 
     // </div>
-    <div id="about" class="sm:px-5 md:px-20 flex bg-[#0E0E0E] items-center justify-center font-poppins">
-      <div class="h-full w-full rounded-lg bg-gradient-to-b from-[#ffffff00] via-[#fefab730] to-[#d69a3f20] p-1 border-2 border-[#D6993F] m-12">
-        <div class=" h-full w-full items-center justify-center bg-gray-800 back p-4 sm:p-8 text-center text-white bg-transparent">
-          <div class="flex justify-center">
+    <div id="about" className="sm:px-5 md:px-20 flex bg-[#0E0E0E] items-center justify-center font-poppins">
+      <div className="h-full w-full rounded-lg bg-gradient-to-b from-[#ffffff00] via-[#fefab730] to-[#d69a3f20] p-1 border-2 border-[#D6993F] m-12">
+        <div className=" h-full w-full items-center justify-center bg-gray-800 back p-4 sm:p-8 text-center text-white bg-transparent">
+          <div className="flex justify-center">
             <Image
               src={logo}
               alt="E-Summit Logo"
               className="item-center h-[20vh]"
             />
           </div>
-          <h1 class="text-2xl md:text-4xl font-black p-4">
+          <h1 className="text-2xl md:text-4xl font-black p-4">
             About E-Summit&apos;24
           </h1>
           <p className="">

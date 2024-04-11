@@ -95,7 +95,7 @@ export default function TermsConditions() {
   }, [status, router]);
 
   return (
-    <div className="h-full w-full bg-[#0e0e0e]">
+    <div className="min-h-screen w-full bg-[#0e0e0e]">
       {/* <Image src={bg} alt="bgImage" fill className="object-cover z-[-10] w-full min-h-[100vh]" /> */}
       {isLoading && <Loader />}
       <div className="flex flex-col items-center justify-center bg-transparent h-screen max-md:overflow-scroll max-md:max-h-fit ">
