@@ -55,7 +55,7 @@ export default function LeaderDashboard() {
           if (user.events.includes(2)) {
             if (user.event2TeamId == null) {
               // router.push("/events/event2/makeTeam");
-              router.push('/');
+              router.push("/");
             } else {
               if (user.event2TeamRole == 1) {
                 router.push("/events/event2/memberDash");
@@ -69,7 +69,7 @@ export default function LeaderDashboard() {
           }
         } else {
           // router.push("/userDetails");
-          router.push('/');
+          router.push("/");
         }
       });
   };
@@ -227,7 +227,7 @@ export default function LeaderDashboard() {
         </div>
       </div>
 
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mt-4 gap-4 flex-wrap">
         {/* <button
           className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           onClick={() => {
@@ -236,6 +236,42 @@ export default function LeaderDashboard() {
         >
           Start Quiz
         </button> */}
+        <Link
+          href={
+            "https://utfs.io/f/3a1b2b0a-7b52-4fc9-82f4-a8ff88cf74e8-14pva6.pdf"
+          }
+          target="_blank"
+          className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
+        >
+          tracks
+        </Link>
+        <Link
+          href={
+            "https://utfs.io/f/61962800-097f-4926-94b4-930a5ff3d259-ofyn5h.pdf"
+          }
+          target="_blank"
+          className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
+          onClick={() => {}}
+        >
+          PPT Template
+        </Link>
+        <Link
+          href={
+            "https://utfs.io/f/4bcab23f-ed1f-4d65-a4e2-7afa69f7c612-8wux6u.png"
+          }
+          target="_blank"
+          className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
+          onClick={() => {}}
+        >
+          PPT Background
+        </Link>
+        <Link
+          href={"https://forms.gle/c23vnBv3XWYxb5TQ7"}
+          target="_blank"
+          className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
+        >
+          Upload Document
+        </Link>
 
         {/* <DeleteTeamButton onClick={() => deleteTeam()} /> */}
 
