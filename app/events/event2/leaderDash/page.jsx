@@ -247,7 +247,7 @@ export default function LeaderDashboard() {
         </Link>
         <Link
           href={
-            "https://docs.google.com/presentation/d/1E2AQhzSIjT-2x8iCdN0RV_lu3iE8do1wj0QC9Lqax1o/edit?usp=sharing"
+            "https://utfs.io/f/61962800-097f-4926-94b4-930a5ff3d259-ofyn5h.pdf"
           }
           target="_blank"
           className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
