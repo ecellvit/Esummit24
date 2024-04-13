@@ -57,14 +57,16 @@ const TeamPage = () => {
                 setIsLoading(false);
               }
             } else {
-              router.push("/events/event2/makeTeam");
+              // router.push("/events/event2/makeTeam");
+              router.push("/");
             }
           } else {
             toast.error("Please register the Event first!!");
             router.push("/");
           }
         } else {
-          router.push("/userDetails");
+          // router.push("/userDetails");
+          router.push("/");
         }
       })
       .catch((err) => {
@@ -157,12 +159,12 @@ const TeamPage = () => {
           })}
         </div>
       </div>
-      <div className="flex justify-center mt-4">
+      {/* <div className="flex justify-center mt-4">
         <LeaveButton
           // onClick={()=>{
           onClick={() => leaveTeam()}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
