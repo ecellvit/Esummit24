@@ -89,7 +89,8 @@ export default function TermsConditions() {
         router.push("/");
       } else if (status === "authenticated") {
         // toast.success("Logged In");
-        getData();
+        router.push('/');
+        // getData();
       }
     }
   }, [status, router]);

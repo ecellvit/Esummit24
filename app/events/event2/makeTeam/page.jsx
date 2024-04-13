@@ -20,7 +20,8 @@ const MakeTeam = () => {
       router.push("/");
     } else if (status === "authenticated") {
       // toast.success("Logged In");
-      getUserData();
+      // getUserData();
+      router.push('/');
     }
   }, [status, router]);
 

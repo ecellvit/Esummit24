@@ -54,7 +54,8 @@ export default function LeaderDashboard() {
         if (user.hasFilledDetails == true) {
           if (user.events.includes(2)) {
             if (user.event2TeamId == null) {
-              router.push("/events/event2/makeTeam");
+              // router.push("/events/event2/makeTeam");
+              router.push('/');
             } else {
               if (user.event2TeamRole == 1) {
                 router.push("/events/event2/memberDash");
@@ -67,7 +68,8 @@ export default function LeaderDashboard() {
             router.push("/");
           }
         } else {
-          router.push("/userDetails");
+          // router.push("/userDetails");
+          router.push('/');
         }
       });
   };
@@ -192,7 +194,7 @@ export default function LeaderDashboard() {
             </p>
           </div>
         )}
-        {teamMembersData.length < 4 && (
+        {/* {teamMembersData.length < 4 && (
           <Link
             className="text-black bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] hover:bg-gradient-to-br hover:from-amber-400 hover:via-amber-200 hover:to-yellow-400 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2'"
             href="/events/event2/teamCode"
@@ -200,7 +202,7 @@ export default function LeaderDashboard() {
             {" "}
             Add Members{" "}
           </Link>
-        )}
+        )} */}
         <div className="flex flex-wrap justify-center">
           {teamMembersData.map((el) => {
             return (
@@ -235,7 +237,7 @@ export default function LeaderDashboard() {
           Start Quiz
         </button> */}
 
-        <DeleteTeamButton onClick={() => deleteTeam()} />
+        {/* <DeleteTeamButton onClick={() => deleteTeam()} /> */}
 
         {/* {isQualified && (
           <div className="flex flex-col text-white items-center border p-2 rounded-xl my-2">
