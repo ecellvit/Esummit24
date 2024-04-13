@@ -96,8 +96,8 @@ export default function Home() {
       <Who />
       {/* <Schedule scheduleRef={scheduleRef} /> */}
       <Timeline scheduleRef={scheduleRef} caps={caps} />
-      <Temp /> {/* temp for speakers section */}
-      {/* <Speakers /> */}
+      {/* <Temp /> temp for speakers section */}
+      <Speakers />
       <Sponsors />
       <FAQ />
       <Footer />
