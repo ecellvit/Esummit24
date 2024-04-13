@@ -1,0 +1,905 @@
+{
+  "easy": [
+    {
+      "index": 0,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742150/Screenshot_2024-04-10_151131_ssjnxq.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i) 6", "ii) 5", "iii) 7", "iv) 8"]
+      }
+    },
+    {
+      "index": 1,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742273/Screenshot_2024-04-10_151416_irgjrz.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "a) Customer Segments",
+          "b) Value Propositions",
+          "c) Key Activities",
+          "d) Financial Projections"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742339/Screenshot_2024-04-10_151525_slno5h.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["a) Beta", "b) Alpha", "c) Gamma", "d) Delta"]
+      }
+    },
+    {
+      "index": 3,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742445/Screenshot_2024-04-10_151702_nebjuo.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "(a) Apple",
+          "(b) Amazon ",
+          "(c) Tesla (already a major player in self-driving cars) ",
+          "(d) Microsoft"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742655/Screenshot_2024-04-10_152042_yhhci7.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "(a) SpaceX ",
+          "(b) Blue Origin ",
+          "(c) Virgin Galactic ",
+          "(d) Rocket Lab"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742737/Screenshot_2024-04-10_152153_qpo8ad.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "a)Goldi, patanjali, Servotech, Waaree",
+          "b)Everest, Mondelez, Milky mist, Kelloggs",
+          "c)Tokyo electron, Lam research, ASML holdings,Applied material",
+          "d)Netease, Capgemini, Baidu, Hewlett packard"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742819/Screenshot_2024-04-10_152324_tp7tkd.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A. Charge a one-time fee for your product",
+          "B. Offer a subscription service with recurring fees",
+          "C. Hope people will donate to your business",
+          "D. Figure it out later, focus on the idea first"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746689/Screenshot_2024-04-10_152503_ufuook.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A. Offer a lower price",
+          "B. Solve the problem in a unique and innovative way",
+          " C. Have a more colorful logo",
+          "D. Target a completely different market"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712742975/Screenshot_2024-04-10_152602_inhgor.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A) Developing a detailed business plan",
+          "B) Focusing on gathering user feedback.",
+          "C) Designing a visually appealing logo",
+          "D) Researching your favorite competitor's strategies"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746555/Screenshot_2024-04-10_153001_v3mceq.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i) A", " ii) B", "iii) C", "iv) D"]
+      }
+    },
+    {
+      "index": 10,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712743412/Screenshot_2024-04-10_153314_vbgmtc.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A-iv, B-i, C-v, D-ii, E-iii",
+          "A-ii, B-iii, C-i, D-iv, E-iii",
+          "A-iii, B-iv, C-i, D-ii, E-i",
+          "A-i, B-ii, C-iii, D-iv, E-ii"
+        ]
+      }
+    },
+
+    {
+      "index": 11,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712743774/Screenshot_2024-04-10_153815_aalvzx.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A-ii, B-i, C-iii, D-iv, E-i",
+          "A-i, B-iii, C-ii, D-v, E-ii",
+          "A-iv,B-iii,C-v,D-ii,E-i",
+          "A-iv, B-v, C-i, D-iii, E-iii"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712744038/Screenshot_2024-04-10_154256_oml8d4.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "Bargaining power of suppliers",
+          "Threats of substitutes",
+          "Threat of new entrants",
+          "Threat of new substitutes."
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746826/Screenshot_2024-04-10_154643_nrzdae.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "a)TPELM Tata motors",
+          "b)OLA electric",
+          "c)Ather energy",
+          "d)Rapido"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712744479/Screenshot_2024-04-10_155008_xx4tj9.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A - jack dosey (twitter founder)",
+          "B - mark cubar(shark tank co-founder, HDNet, etc)",
+          "C - james dyson (vacuum dry cleaner)",
+          "D - Bill draytron(founder of ashoka)"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712744688/Screenshot_2024-04-10_155430_hiizbg.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["Korea", "Norway", "India", "Australia"]
+      }
+    },
+    {
+      "index": 16,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712744798/Screenshot_2024-04-10_155617_lan3ax.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i) A", "ii) B", "iii) C", "iv) D"]
+      }
+    },
+    {
+      "index": 17,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746909/Screenshot_2024-04-10_155919_fg2tol.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i. c", "ii. a ", "iii. d", "iv. b"]
+      }
+    },
+    {
+      "index": 18,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745023/Screenshot_2024-04-10_160008_ixq5sb.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A)Reliance", "B)Adani", "C)TATA", "D)Infosys"]
+      }
+    },
+    {
+      "index": 19,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745165/Screenshot_2024-04-10_160227_ib5wml.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "iv, iii, v, ii, vi, i, vii",
+          "iii, i, ii, v, vii, vi, iv",
+          "i, iii, ii, iv, vi, v, vii",
+          "ii , vii, iii, vi, i, iv, v"
+        ]
+      }
+    }
+  ],
+  "medium": [
+    {
+      "index": 0,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745252/Screenshot_2024-04-10_160358_jskshq.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745415/Screenshot_2024-04-10_160644_nj4y5f.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745577/Screenshot_2024-04-10_160743_we2asi.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A","B","C","D"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745658/Screenshot_2024-04-10_161036_nw2x0i.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 4,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745727/Screenshot_2024-04-10_161147_tyu4yd.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 5,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745851/Screenshot_2024-04-10_161350_qvxfo1.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 6,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712745932/Screenshot_2024-04-10_161520_sweiei.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 7,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746051/Screenshot_2024-04-10_161714_ohq86s.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 8,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746122/Screenshot_2024-04-10_161821_iilr7p.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 9,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712746336/Screenshot_2024-04-10_161951_hd3zlg.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 10,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747118/Screenshot_2024-04-10_162211_r1ks47.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 11,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747274/Screenshot_2024-04-10_163740_hnjfdn.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["i","ii","iii","iv"]
+      }
+    },
+    {
+      "index": 12,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747441/Screenshot_2024-04-10_164015_ycjmuv.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A-II, B-I, C-IV, D-V, E-III",
+          "A-III, B-I, C-II, D-IV, E-II ",
+          "A-IV, B-I, C-V, D-II, E-III",
+          "A-II, B-IV, C-I, D-III, E-II"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747685/Screenshot_2024-04-10_164422_uoifcr.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A-IV, B-III, C-V, D-II, E-I",
+          "A-III, B-I, C-II, D-IV, E-I ",
+          "A-I, B-II, C-V, D-III, E-III",
+          "A-I, B-V, C-II, D-III, E-III"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747736/Screenshot_2024-04-10_164519_mtyd4q.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 15,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712747822/Screenshot_2024-04-10_164637_pjh60m.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 16,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": "https://utfs.io/f/b4c4c32a-1242-4882-b735-9e73a01aa9fc-dg16ui.mp3",
+        "content": "What is the key principle underlying the speaker's business technique?\n(If you given audio is same as of previous questions.Please reload the page!!)"
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A) Exclusively focusing on short-term profits.",
+        "B) Emphasising strict hierarchical structures within organisations.",
+        "C) Prioritising customer satisfaction and employee well-being.",
+        "D) Ignoring innovation and sticking to traditional methods."
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": "https://utfs.io/f/c3f7cc3f-c111-43e3-a289-88478a548373-uvsloh.mp3",
+        "content": "The speaker, an inspiring women entrepreneur, employed which financial strategy to facilitate her company's growth and profitability\n(If you given audio is same as of previous questions.Please reload the page!!)"
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A) Taking on excessive debt to fuel expansion.",
+          "B) Implementing aggressive cost-cutting measures.",
+          "C) Investing heavily in research and development.",
+          "D) Conducting successful initial public offering (IPO) to raise capita"
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712748094/Screenshot_2024-04-10_165019_mnhqch.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i","ii","iii","iv"]
+      }
+    },
+    {
+      "index": 19,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712748274/Screenshot_2024-04-10_165129_kjzppw.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["i", "ii", "iii", "iv"]
+      }
+    }
+  ],
+  "hard": [
+    {
+      "index": 0,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712748365/Screenshot_2024-04-10_165429_rtsgbh.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 1,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749092/Screenshot_2024-04-10_170753_dow9v7.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["(i)","(ii)","(iii)","(iv)"]
+      }
+    },
+    {
+      "index": 2,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749278/Screenshot_2024-04-10_171047_hjcw4u.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["(i)","(ii)","(iii)","(iv)"]
+      }
+    },
+    {
+      "index": 3,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749349/Screenshot_2024-04-10_171208_ubw6ct.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 4,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749437/Screenshot_2024-04-10_171326_ek5o8v.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 5,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749708/Screenshot_2024-04-10_171517_y3q0j0.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 6,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749760/Screenshot_2024-04-10_171821_cqlkkm.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 7,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712749873/Screenshot_2024-04-10_172048_vswajz.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 8,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712750676/Screenshot_2024-04-10_172944_zznl2r.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 9,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712750751/Screenshot_2024-04-10_173428_uyf6r5.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 10,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751140/Screenshot_2024-04-10_173543_e3hy2i.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 11,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751149/Screenshot_2024-04-10_173749_kdwtqs.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 12,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751293/Screenshot_2024-04-10_174308_v5ccnz.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": ["A","B","C","D"]
+      }
+    },
+    {
+      "index": 13,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751371/Screenshot_2024-04-10_174559_h4izpq.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 14,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751438/Screenshot_2024-04-10_174657_jobqdl.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 15,
+      "q": {
+        "questionType": "single",
+        "contentType": "image",
+        "contentLink": "https://res.cloudinary.com/dfqhiggkp/image/upload/v1712751585/Screenshot_2024-04-10_174925_f28k4s.png",
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent":["A","B","C","D"]
+      }
+    },
+    {
+      "index": 16,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": ["https://utfs.io/f/a34048dd-f427-41d4-acfe-5af52fbcc392-zfzhj7.m4a","https://utfs.io/f/521de56b-6b58-444e-a637-3172305b7613-2s0tjt.m4a"],
+        "content": ""
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "Both Assertion [A] and Reason [R] are true and Reason [R] is the correct explanation of Assertion [A]",
+          "Both Assertion [A] and Reason [R] are true but Reason [R] is not the correct explanation of Assertion [A]",
+          "Assertion [A] is true but Reason [R] is false",
+          "Assertion [A] is false but Reason [R] is true."
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": ["https://utfs.io/f/7443a638-37b4-4f11-a111-04af63ebbb44-z8h3pa.m4a","https://utfs.io/f/a9276e70-de7b-4def-9942-19c7ebc19ca5-2fdct6.m4a"],
+        "content": "Directions: Read the following statements:\nAssertion (A) and Reason (R). Choose one of the correct alternatives"
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A).",
+          "Both Assertion (A) and Reason (R) are true but Reason (R) is not the correct explanation of Assertion (A).",
+          "Assertion (A) is true but Reason (R) is false.",
+          "Assertion (A) is false but Reason (R) is true."
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": ["https://utfs.io/f/b01b972e-9550-4b79-8551-5a2177fcdd86-2rbj35.m4a","https://utfs.io/f/9da28f88-6424-472a-bfbb-7c95ee198444-2fbaed.m4a"],
+        "content": "Listen to the audio clip to answer assertion and reason"
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "Both Assertion and reason are correct and reason is the correct explanation for assertion",
+          "Both Assertion and reason are correct and reason is not the correct explanation for assertion",
+          "Assertion is true, reason is false",
+          "Both are false"
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "q": {
+        "questionType": "single",
+        "contentType": "audio",
+        "contentLink": ["https://utfs.io/f/b8fb6114-7c53-4397-bdbc-69ccdcd2a5a7-wjue9h.m4a","https://utfs.io/f/b843ab42-0af7-4acd-8d55-6f9a430ee942-99cmn.m4a"],
+        "content": "Listen to the audio clip to answer assertion and reason"
+      },
+      "ans": {
+        "optionsType": "text",
+        "optionsContent": [
+          "A)Both Assertion and reason are correct and reason is the correct explanation for assertion",
+          "B)Both Assertion and reason are correct and reason is not the correct explanation for assertion",
+          "C)Assertion is true, reason is false",
+          "D)Both are false"
+        ]
+      }
+    }
+  ]
+}

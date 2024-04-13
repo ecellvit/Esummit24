@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 // import LeaderDashboardCards from "./LeaderDashboardCards";
-import Card from '@/components/Card';
-import DeleteTeamButton from '@/components/DeleteTeamButton';
-import boardImg from '@/public/assets/boardpics/image2.svg';
-import { useSession } from 'next-auth/react';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import toast, { Toaster } from 'react-hot-toast';
-import Loader from '@/components/Loader';
+import Card from "@/components/Card";
+import DeleteTeamButton from "@/components/DeleteTeamButton";
+import boardImg from "@/public/assets/boardpics/image2.svg";
+import { useSession } from "next-auth/react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import toast, { Toaster } from "react-hot-toast";
+import Loader from "@/components/Loader";
 
 export default function LeaderDashboard() {
   const [popUpForDelete, setPopUpForDelete] = useState(false);
@@ -17,9 +17,9 @@ export default function LeaderDashboard() {
   const [deleted, setDeleted] = useState(false);
   const [remove, setRemove] = useState(false);
   const [id, setId] = useState();
-  const [teamId, setTeamId] = useState('');
-  const [teamLeaderId, setTeamLeaderId] = useState('');
-  const [teamName, setTeamName] = useState('');
+  const [teamId, setTeamId] = useState("");
+  const [teamLeaderId, setTeamLeaderId] = useState("");
+  const [teamName, setTeamName] = useState("");
   const [teamMembersData, setTeamMemberData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isQualified, setIsQualified] = useState(null);
@@ -28,69 +28,69 @@ export default function LeaderDashboard() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log('uussee');
-    if (status === 'unauthenticated') {
-      router.push('/');
-    } else if (status === 'authenticated') {
-      console.log('aauutthh');
+    console.log("uussee");
+    if (status === "unauthenticated") {
+      router.push("/");
+    } else if (status === "authenticated") {
+      console.log("aauutthh");
       getUserData();
       fetchDataFromBackend();
     }
   }, [status, router]);
 
   const getUserData = () => {
-    console.log('ssdd')
+    console.log("ssdd");
     setIsLoading(true);
     fetch(`/api/userDetails`, {
-      content: 'application/json',
-      method: 'GET',
+      content: "application/json",
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
       .then((data) => {
         const user = data.user;
-        console.log('user');
+        console.log("user");
         setIsLoading(false);
         if (user.hasFilledDetails == true) {
-          if((user.events).includes(1)){
+          if (user.events.includes(1)) {
             if (user.event1TeamId == null) {
-              router.push('/events/event1/makeTeam');
+              router.push("/events/event1/makeTeam");
             } else {
               if (user.event1TeamRole == 1) {
-                router.push('/events/event1/memberDash');
+                router.push("/events/event1/memberDash");
               } else {
                 setIsLoading(false);
               }
             }
-          }else{
-            toast.error('Please register the Event first')
-            router.push('/')
+          } else {
+            toast.error("Please register the Event first");
+            router.push("/");
           }
         } else {
-          router.push('/userDetails');
+          router.push("/userDetails");
         }
       });
   };
 
   const fetchDataFromBackend = () => {
-    console.log('ffdd')
+    console.log("ffdd");
     setIsLoading(true);
-    fetch('/api/event1/getTeamData', {
-      content: 'application/json',
-      method: 'GET',
+    fetch("/api/event1/getTeamData", {
+      content: "application/json",
+      method: "GET",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log('dataa', data);
+        console.log("dataa", data);
         setTeamId(data.teamDetails._id);
         setTeamMemberData(data.teamDetails.members);
         setTeamName(data.teamDetails.teamName);
@@ -99,7 +99,9 @@ export default function LeaderDashboard() {
 
         setIsLoading(false);
       })
-      .catch((err) => {console.log('err', err)});
+      .catch((err) => {
+        console.log("err", err);
+      });
   };
 
   function toggleDelete() {
@@ -116,14 +118,14 @@ export default function LeaderDashboard() {
   }
   function removeMember(id) {
     setRemove((prev) => !prev);
-    console.log('id', id);
+    console.log("id", id);
     setIsLoading(true);
     fetch(`/api/event1/removeMember/${id}`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
         userId: id,
@@ -137,35 +139,35 @@ export default function LeaderDashboard() {
       .then(() => {
         setRemove(!remove);
         location.reload();
-        toast.success('Member removed successfully.');
+        toast.success("Member removed successfully.");
       });
   }
 
   function deleteTeam() {
     if (teamMembersData.length !== 1) {
-      toast.error('First remove all other members.');
+      toast.error("First remove all other members.");
       return;
     }
     setIsLoading(true);
     setDeleted(!deleted);
-    fetch(`/api/event1/deleteTeam/${teamId}` , {
-      method: 'POST',
+    fetch(`/api/event1/deleteTeam/${teamId}`, {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         Authorization: `Bearer ${session.accessTokenBackend}`,
-        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Origin": "*",
       },
     })
       .then((res) => res.json())
       .then((data) => {})
       .then(() => {
         // router.push('/events/event1/makeTeam');
-        toast.success('Team Deleted.');
-        window.location.href='/mySchedule';
+        toast.success("Team Deleted.");
+        window.location.href = "/mySchedule";
         setIsLoading(false);
       })
       .catch(() => {
-        toast.error('Something went wrong.');
+        toast.error("Something went wrong.");
         setIsLoading(false);
       });
   }
@@ -174,8 +176,8 @@ export default function LeaderDashboard() {
     <div
       className="bg-[#0E0E0E] bg-cover bg-no-repeat bg-center min-h-screen py-10"
       // style={{ backgroundImage: 'url(/assets/bg/spceBg.svg)' }}
-      >
-      {isLoading && <Loader/>}
+    >
+      {isLoading && <Loader />}
 
       <div className="bg-[#0E0E0E] max-w-screen-xl mx-auto p-4 text-center">
         <h1 className="text-3xl font-bold mb-4 mt-8 text-white">
@@ -184,13 +186,14 @@ export default function LeaderDashboard() {
 
         {teamMembersData.length < 3 && (
           <div
-            style={{ backgroundColor: '#141B2B' }}
-            className="p-2 outline outline-slate-700 outline-2 rounded-md mb-5">
+            style={{ backgroundColor: "#141B2B" }}
+            className="p-2 outline outline-slate-700 outline-2 rounded-md mb-5"
+          >
             <p className="text-white">
-              I understand that if the team I have created does not
-              meet the minimum requirement of 3 members per team
-              before the end of registrations, random members
-              who&lsquo;ve registered would be added to my team
+              I understand that if the team I have created does not meet the
+              minimum requirement of 3 members per team before the end of
+              registrations, random members who&lsquo;ve registered would be
+              added to my team
             </p>
           </div>
         )}
@@ -220,7 +223,7 @@ export default function LeaderDashboard() {
               <div key={el.name}>
                 <Card
                   name={el.name}
-                  Role={el.event1TeamRole === 0 ? 'Leader' : 'Member'}
+                  Role={el.event1TeamRole === 0 ? "Leader" : "Member"}
                   regNo={el.regNo}
                   phone={el.mobNo}
                   leader={true}
@@ -242,7 +245,7 @@ export default function LeaderDashboard() {
         {/* <button
           className="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           onClick={() => {
-            router.push("/levels/qualifier");
+            router.push("/events/round0");
           }}
         >
           Start Quiz
@@ -250,18 +253,25 @@ export default function LeaderDashboard() {
 
         {/* <DeleteTeamButton onClick={() => deleteTeam()} /> */}
 
-        {/* {isQualified && (
+        {isQualified ? (
           <div className="flex flex-col text-white items-center border p-2 rounded-xl my-2">
             <h1 className="text-lg font-bold">
-              Congratulations! Your team has been shortlisted for the
-              main round of Futurepreneurs 9.0.
+              Congratulations! Your team has been qualified for the main round
+              of Innoventure.
             </h1>
             <h6 className="font-bold">See you at the event!</h6>
-            <h6>Date : 19 January 2024</h6>
-            <h6>Reporting Time : 9 AM</h6>
-            <h6>Venue : Sarojini Naidu Hall, SJT</h6>
+            <h6>Date : 13 April 2024</h6>
+            <h6>Reporting Time : 10:30 AM</h6>
+            <h6>Venue : MGB Hall, MGB</h6>
           </div>
-        )} */}
+        ) : (
+          <div className="flex flex-col text-white items-center border p-2 rounded-xl my-2">
+            <h1 className="text-lg font-bold">
+              Thank you for your participation but we regret to inform you that
+              you have not been qualified.
+            </h1>
+          </div>
+        )}
         <Toaster />
       </div>
     </div>

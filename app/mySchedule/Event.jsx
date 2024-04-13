@@ -2,6 +2,7 @@ import Loader from "@/components/Loader";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
+import { GrMapLocation } from "react-icons/gr";
 import {
   FaRegClock,
   FaInfoCircle,
@@ -72,9 +73,24 @@ const Event = ({ event, userDetails }) => {
               Go to Dashboard
             </button>
           )}
+          {event.loc && (
+            <Link
+              className="text-black flex justify-center items-center gap-2 capitalize font-semibold hover:scale-105 transition-all bg-gradient-to-br from-[#DCA64E] via-[#FEFAB7] to-[#D6993F] p-2 rounded-lg hover:bg-opacity-80"
+              target="_blank"
+              href={event.loc}
+            >
+              <span>
+                <GrMapLocation />
+              </span>
+              get directions
+            </Link>
+          )}
           {(event.id === 1 || event.id === 2) && (
             <button className="bg-[#50CC5E] p-2 rounded-xl font-semibold">
-              <Link className="flex items-center gap-2 justify-center" href={event.whatsapp}>
+              <Link
+                className="flex items-center gap-2 justify-center"
+                href={event.whatsapp}
+              >
                 <span className="h-full">
                   <FaWhatsapp className="p-0 m-0 text-xl" />
                 </span>

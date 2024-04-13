@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const teamSchema = mongoose.Schema(
   {
@@ -8,7 +8,7 @@ const teamSchema = mongoose.Schema(
     },
     teamLeaderId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Users",
+      ref: 'testingUsers',
     },
     teamNumber: {
       type: Number,
@@ -19,25 +19,19 @@ const teamSchema = mongoose.Schema(
     leaderEmail: {
       type: String,
     },
-    isQualified: {
-      type: Boolean,
-      default: false,
-    },
     members: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users",
+        ref: 'testingUsers',
       },
     ],
     teamCode: {
       type: String,
-    },
-    linkNumber: {
-      type: Number,
-    },
+    }
   },
-  { collection: "Event1" }
+  { collection: 'testingEvent2' }
 );
 
-export const Event1 =
-  mongoose.models.Event1 || mongoose.model("Event1", teamSchema);
+export const testingEvent2 =
+  mongoose.models.testingEvent2 ||
+  mongoose.model('testingEvent2', teamSchema);
