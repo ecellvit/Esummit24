@@ -55,10 +55,10 @@ const scheduleDetails = [
     description:
       "The Ideathon is an event based on the participants' entrepreneurial spirit where they will brainstorm and pitch innovative business ideas through teamwork and creativity and develop actionable plans to tackle real-world challenges, competing for recognition.",
     image: image,
-    venue: "coming soon",
+    venue: "Sarojini Naidu Gallery",
     time: "10:00 AM to 05:00 PM",
     whatsapp: "https://chat.whatsapp.com/EIxnuFBAJheHUTcGm5B0zr",
-    loc: null,
+    loc: "https://maps.app.goo.gl/9hPWa6ir3g7UQcSZ6",
   },
 ];
 
